@@ -248,6 +248,9 @@ a.ssolink {
 session_start();
 $errors = array(); 
 
+// connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'registration');
+
 if (isset($_POST['login_user'])) {
     $matricnumber = mysqli_real_escape_string($db, $_POST['matricnumber']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
