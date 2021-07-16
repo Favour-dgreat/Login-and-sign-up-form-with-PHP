@@ -1,5 +1,0 @@
-<?php
-// LOGIN USER
-
-
-?>
