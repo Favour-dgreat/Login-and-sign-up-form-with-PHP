@@ -1,14 +1,10 @@
 <?php
 include "db.php";
 
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-} else {
-    $query = "SELECT * FROM students WHERE username = " . $_SESSION["username"];
+    $query = "SELECT * FROM students WHERE username = "1803010111";
     $result = mysqli_query($con, $query);
     $row = mysqli_fetch_array($result);
     $user_data = $row;
-}
 ?>
 <html>
 <head>
@@ -24,7 +20,7 @@ if (!isset($_SESSION['username'])) {
   	<!-- notification message -->
 	  <i class="bi bi-person-circle" style="font-size:200px;"></i>
     <br> <br>	
-	  <p class="fw-bold" style="font-size:25px;">Welcome <strong><?php echo $_SESSION['username']; ?></strong>Here are your details below</p>
+	  <p class="fw-bold" style="font-size:25px;">Welcome <strong>1803010111</strong>Here are your details below</p>
 	<br>
 	<p>
 	<strong><?php echo $user_data['username']; ?></strong>
